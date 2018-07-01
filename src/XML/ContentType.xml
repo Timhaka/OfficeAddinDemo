@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pnp:ProvisioningTemplate ID="Demo" xmlns:pnp="http://schemas.dev.office.com/PnP/2018/01/ProvisioningSchema">
+
+  <!--My Fields-->
+  <pnp:SiteFields>
+    <Field ID="{1198886e-3a31-4a62-9160-35d48d7ffaae}"
+           Type="Text"
+           Name="PRES_DokumentOwner"
+           DisplayName="Dokument Owner"
+           Group="Presentation"/>
+
+    <Field ID="{432f7e00-a6c5-4fa5-9cd5-875578dcd45d}"
+           Type="DateTime"
+           Format="DateOnly"
+           Name="PRES_RevisionDate"
+           DisplayName="Revision Date"
+           Group="Presentation"/>
+           
+  </pnp:SiteFields>
+
+  <pnp:ContentTypes>
+    <pnp:ContentType ID="0x010100478f04b769f149ffa21b7990e93da9f5" Name="Demo" Description="A Content Type for staff dokuments" Group="PresentationCT">
+      <pnp:FieldRefs>
+        <pnp:FieldRef ID="{1198886e-3a31-4a62-9160-35d48d7ffaae}"  />
+        <pnp:FieldRef ID="{432f7e00-a6c5-4fa5-9cd5-875578dcd45d}"  />
+      </pnp:FieldRefs>
+    </pnp:ContentType>
+  </pnp:ContentTypes>
+
+</pnp:ProvisioningTemplate>
